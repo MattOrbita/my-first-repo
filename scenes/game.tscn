@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://cbr21bhkxehg"]
+[gd_scene load_steps=14 format=3 uid="uid://cbr21bhkxehg"]
 
 [ext_resource type="PackedScene" uid="uid://qlvopi70kdr6" path="res://scenes/player.tscn" id="1_8g8h8"]
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_67gfk"]
 [ext_resource type="Texture2D" uid="uid://b6jeqdqct44ay" path="res://assets/sprites/world_tileset.png" id="2_hoodx"]
 [ext_resource type="PackedScene" uid="uid://bfkan35qd7cup" path="res://scenes/platform.tscn" id="3_77rsd"]
 [ext_resource type="PackedScene" uid="uid://dmio0sklglbqd" path="res://scenes/coin.tscn" id="4_u1tgm"]
@@ -452,6 +453,10 @@ _data = {
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_n6xpo"]
 
 [node name="Game" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_67gfk")
 
 [node name="Player" parent="." instance=ExtResource("1_8g8h8")]
 position = Vector2(-96.67, 0)
